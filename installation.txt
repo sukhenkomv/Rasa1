@@ -1,2 +1,11 @@
+Activate the virtual environment:
+
+source ./venv/bin/activate
+
+
+Installation
+
 pip install rasa[spacy]
 python -m spacy download ru_core_news_md
+
+

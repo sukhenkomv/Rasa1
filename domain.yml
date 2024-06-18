@@ -3,6 +3,27 @@ version: '3.1'
 intents:
   - int_greet
   - int_goodbye
+  - btn_show_main_menu                                      # Показать главное меню
+  - btn_return_to_main_menu                                 # Возврат в меню
+  - btn_account_manage                                      # Управление счетом
+  - btn_account_manage_promised_payment                     #   Подключить отсрочку
+  - btn_account_manage_voluntary_blocking                   #   Заблокировать договор
+  - btn_account_manage_details                              #   Детализация счета
+  - btn_account_manage_payment_methods                      #   Способы оплаты
+  - btn_account_manage_wrong_pay                            #   Ошибка при оплате
+  - btn_account_manage_refund_balance                       #   Возврат остатка
+  - btn_account_manage_reregistration                       #   Перерегистрация на другое лицо
+  - btn_account_manage_add_services                         #   Подключить услуги
+  - btn_account_manage_another_question                     #   Другой вопрос
+  - btn_fix_internet                                        # Починить интернет
+  - btn_fix_internet_low_speed                              #   Пропал интернет / низкая скорость
+  - btn_fix_internet_new_device                             #   Новый роутер / ПК
+  - btn_fix_internet_didnt_help                             #   Не помогло
+  - btn_domofon                                             # Домофон
+  - btn_domofon_add_intercom                                #   Подключить
+  - btn_domofon_key_required                                #   Требуется ключ
+  - btn_domofon_not_work                                    #   Не работает
+  - btn_domofon_problem_with_my_home_app                    #   Проблема с приложением Мой Дом
 
 responses:
 
@@ -74,3 +95,8 @@ responses:
       payload: /btn_domofon_not_work
     - title: Проблемы с приложением Мой Дом
       payload: /btn_domofon_problem_with_my_home_app
+
+#actions:
+#  - action_restart
+#  - action_hello_world
+

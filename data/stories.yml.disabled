@@ -1,0 +1,6 @@
+varsion: "3.1"
+
+stories:
+- story: начало
+  steps:
+  - action: utter_main_manu
