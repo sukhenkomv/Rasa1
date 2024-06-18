@@ -1,0 +1,2 @@
+pip install rasa[spacy]
+python -m spacy download ru_core_news_md

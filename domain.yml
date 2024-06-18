@@ -1,0 +1,42 @@
+version: '3.1'
+
+intents:
+  - greet
+  - goodbye
+  - my_name
+
+entities:
+  - PERSON                                  # извлекаемые из намерений сущности
+
+slots:
+  PERSON:                                   # имя слота (можно русскими буквами)
+    type: text                              # тип слота (это строка текста)
+    mappings:
+    - type: from_entity
+      entity: PERSON
+
+responses:
+
+  utter_greet:                              # название ответа
+  - text: Привет, рад встречи.              # случайно, одна из этих фраз
+  - text: Как я рад тебя встретить!
+
+  utter_goodbye:
+  - text: До скорой встречи!
+    image: "https://i.imgur.com/nGF1K8f.jpg"# послать вместе с текстом картинку 
+  - text: До свидания!
+  - text: Прощай...
+  - text: Пока.
+  - text: Покедова!
+  - text: Не поминайте лихом!
+  - text: Чао!
+
+  utter_what_is_your_name:
+  - text: Как тебя зовут?
+  - text: Представьтесь пожалуйста
+  - text: Ваше имя?
+  - text: Как к вам обращаться?
+  - text: Как вас зовут?
+
+  utter_pleased_to_meet_you:
+  - text: Рад знакомству, {PERSON}!

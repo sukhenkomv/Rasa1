@@ -1,0 +1,81 @@
+version: "3.1"
+
+nlu:
+
+- intent: greet
+  examples: |
+    - привет
+    - здравствуйте
+    - привет всем
+    - доброе утро
+    - доброго дня
+    - доброго утра
+    - добрый вечер
+    - салют
+    - доброй ночи
+    - hey there
+    - привет!
+
+- intent: goodbye
+  examples: |
+    - пока
+    - покедова
+    - увидимся позже
+    - счастливо отдохнуть
+    - досвидания
+    - до свидания
+    - приятного вам вечера
+    - приятного вечера
+    - приятного дня
+    - пока пока
+
+stories:
+
+- story: happy path
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_great
+  - action: utter_happy
+
+- story: sad path 1
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_unhappy
+  - action: utter_cheer_up
+  - action: utter_did_that_help
+  - intent: affirm
+  - action: utter_happy
+
+- story: sad path 2
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_unhappy
+  - action: utter_cheer_up
+  - action: utter_did_that_help
+  - intent: deny
+  - action: utter_goodbye
+
+- story: interactive_story_1
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: deny
+  - intent: what_do_you_doing
+  - action: action_default_fallback
+  - intent: goodbye
+  - action: utter_goodbye
+
+rules:
+
+- rule: Сказать пока когда пользователь сказал пока
+  steps:
+  - intent: goodbye
+  - action: utter_goodbye
+
+- rule: Сказать 'Я есть бот' когда пользователь спрашивает или хочет человека
+  steps:
+  - intent: bot_challenge
+  - action: utter_iamabot
