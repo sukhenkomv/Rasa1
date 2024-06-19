@@ -9,7 +9,7 @@ python -m spacy download ru_core_news_md
 
 
 
-
+https://rasa.com/docs/rasa/
 https://qudata.com/ml/ru/NLP_RASA.html
 
 
