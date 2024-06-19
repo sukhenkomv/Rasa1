@@ -1,4 +1,5 @@
 venv
 .rasa
 .idea
+.pyc
 models

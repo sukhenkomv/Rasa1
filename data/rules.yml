@@ -20,91 +20,91 @@ rules:
 
 - rule: Показать главное меню
   steps:
-  - intent: btn_show_main_menu
+  - intent: int_show_main_menu
   - action: utter_main_menu
 
 - rule: Показать вложенные кнопки для Управление счетом
   steps:
-  - intent: btn_account_manage
+  - intent: int_account_manage
   - action: utter_account_manage
 
 - rule: Показать вложенные кнопки для Починить интернет
   steps:
-  - intent: btn_fix_internet
+  - intent: int_fix_internet
   - action: utter_fix_internet
 
 - rule: Показать вложенные кнопки для Домофон
   steps:
-  - intent: btn_domofon
+  - intent: int_domofon
   - action: utter_domofon
 
 - rule: Подключить отсрочку
   steps:
-  - intent: btn_account_manage_promised_payment
+  - intent: int_account_manage_promised_payment
   - action: utter_account_manage_promised_payment
   - action: utter_account_manage
 
 - rule: Заблокировать договор
   steps:
-  - intent: btn_account_manage_voluntary_blocking
+  - intent: int_account_manage_voluntary_blocking
   - action: utter_account_manage_voluntary_blocking
   - action: utter_account_manage
 
 - rule: Детализация счета
   steps:
-  - intent: btn_account_manage_details
+  - intent: int_account_manage_details
   - action: utter_account_manage_details
   - action: utter_account_manage
 
 - rule: Способы оплаты
   steps:
-  - intent: btn_account_manage_payment_methods
+  - intent: int_account_manage_payment_methods
   - action: utter_account_manage_payment_methods
 
 - rule: Оплата картой
   steps:
-  - intent: btn_account_manage_payment_by_card
+  - intent: int_account_manage_payment_by_card
   - action: utter_account_manage_payment_by_card
   - action: utter_account_manage_payment_methods
 
 - rule: Ошибка при оплате
   steps:
-  - intent: btn_account_manage_wrong_pay
+  - intent: int_account_manage_wrong_pay
   - action: utter_account_manage_wrong_pay
   - action: utter_account_manage
 
 - rule: Пропал интернет / низкая скорость
   steps:
-  - intent: btn_fix_internet_low_speed
+  - intent: int_fix_internet_low_speed
   - action: utter_fix_internet_low_speed
   - action: utter_fix_internet
 
 - rule: У меня новый роутер/ ПК
   steps:
-  - intent: btn_fix_internet_new_device
+  - intent: int_fix_internet_new_device
   - action: utter_fix_internet_new_device
   - action: utter_fix_internet
 
 - rule: Я всё сделал, не помогло =(
   steps:
-  - intent: btn_fix_internet_didnt_help
+  - intent: int_fix_internet_didnt_help
   - action: utter_fix_internet_didnt_help
   - action: utter_fix_internet
 
 - rule: Подключить домофон
   steps:
-  - intent: btn_domofon_add_intercom
+  - intent: int_domofon_add_intercom
   - action: utter_domofon_add_intercom
   - action: utter_domofon
 
 - rule: Требуется ключ
   steps:
-  - intent: btn_domofon_key_required
+  - intent: int_domofon_key_required
   - action: utter_domofon_key_required
   - action: utter_domofon
 
 - rule: Домофон не работает
   steps:
-  - intent: btn_domofon_not_work
+  - intent: int_domofon_not_work
   - action: utter_domofon_not_work
   - action: utter_domofon

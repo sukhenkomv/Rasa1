@@ -6,32 +6,32 @@ intents:
   - int_what_time_is_it
 
     # показать главное меню
-  - btn_show_main_menu
+  - int_show_main_menu
 
     # разделы главного меню
-  - btn_account_manage
-  - btn_fix_internet
-  - btn_domofon
+  - int_account_manage
+  - int_fix_internet
+  - int_domofon
 
     # управление счетом
-  - btn_account_manage_promised_payment
-  - btn_account_manage_voluntary_blocking
-  - btn_account_manage_details
+  - int_account_manage_promised_payment
+  - int_account_manage_voluntary_blocking
+  - int_account_manage_details
 
-  - btn_account_manage_payment_methods
-  - btn_account_manage_payment_by_card
+  - int_account_manage_payment_methods
+  - int_account_manage_payment_by_card
 
-  - btn_account_manage_wrong_pay
+  - int_account_manage_wrong_pay
 
     # починить интернет
-  - btn_fix_internet_low_speed
-  - btn_fix_internet_new_device
-  - btn_fix_internet_didnt_help
+  - int_fix_internet_low_speed
+  - int_fix_internet_new_device
+  - int_fix_internet_didnt_help
 
     # домофон
-  - btn_domofon_add_intercom
-  - btn_domofon_key_required
-  - btn_domofon_not_work
+  - int_domofon_add_intercom
+  - int_domofon_key_required
+  - int_domofon_not_work
 
 responses:
 
@@ -53,68 +53,65 @@ responses:
   - text: Какой у вас вопрос?
     buttons:
     - title: Управление счетом
-      payload: /btn_account_manage
+      payload: /int_account_manage
     - title: Починить интернет
-      payload: /btn_fix_internet
+      payload: /int_fix_internet
     - title: Домофон
-      payload: /btn_domofon
+      payload: /int_domofon
 
   utter_account_manage:                     # Показать Управление счетом
   - text: "Вот что можем предложить:"
     buttons:
 
     - title: Подключить отсрочку
-      payload: /btn_account_manage_promised_payment
+      payload: /int_account_manage_promised_payment
 
     - title: Заблокировать договор
-      payload: /btn_account_manage_voluntary_blocking
+      payload: /int_account_manage_voluntary_blocking
 
     - title: Детализация счета
-      payload: /btn_account_manage_details
+      payload: /int_account_manage_details
 
     - title: Способы оплаты
-      payload: /btn_account_manage_payment_methods
+      payload: /int_account_manage_payment_methods
 
     - title: Ошибка при оплате
-      payload: /btn_account_manage_wrong_pay
+      payload: /int_account_manage_wrong_pay
 
-    - title: <-Назад
-      payload: /utter_main_menu
+    - title: Назад
+      payload: /int_show_main_menu
     
   utter_fix_internet:                      # Показать Чинить интернет
   - text: "Выберите один из вариантов:"
     buttons:
 
     - title: Пропал интернет / низкая скорость
-      payload: /btn_fix_internet_low_speed
+      payload: /int_fix_internet_low_speed
 
     - title: Новый роутер / ПК
-      payload: /btn_fix_internet_new_device
+      payload: /int_fix_internet_new_device
 
     - title: Не помогло
-      payload: /btn_fix_internet_didnt_help
+      payload: /int_fix_internet_didnt_help
 
-    - title: <-Назад
-      payload: /utter_main_menu
+    - title: Назад
+      payload: /int_show_main_menu
 
   utter_domofon:                           # Показать Домофон
   - text: "Выберите один из вариантов:"
     buttons:
 
     - title: Подключить домофон
-      payload: /btn_domofon_add_intercom
+      payload: /int_domofon_add_intercom
 
     - title: Требуется ключ
-      payload: /btn_domofon_key_required
+      payload: /int_domofon_key_required
 
     - title: Домофон не работает
-      payload: /btn_domofon_not_work
+      payload: /int_domofon_not_work
 
-    - title: Проблемы с приложением Мой Дом
-      payload: /btn_domofon_problem_with_my_home_app
-
-    - title: <-Назад
-      payload: /utter_main_menu
+    - title: Назад
+      payload: /int_show_main_menu
 
   utter_account_manage_promised_payment: # Подключить отсрочку
   - custom:
@@ -136,10 +133,10 @@ responses:
     buttons:
 
     - title: Пополнение баланса с помощью карты
-      payload: /btn_account_manage_payment_by_card
+      payload: /int_account_manage_payment_by_card
 
-    - title: <-Назад
-      payload: /btn_account_manage
+    - title: Назад
+      payload: /int_account_manage
 
   utter_account_manage_payment_by_card: # Оплатить картой
   - custom:

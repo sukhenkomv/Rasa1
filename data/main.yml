@@ -36,27 +36,27 @@ nlu:
     - Который сейчас час?
     - Который час?
 
-- intent: btn_show_main_menu                                      # Показать главное меню
+- intent: int_show_main_menu                                      # Показать главное меню
   examples: |
     - покажи главное меню
     - главное меню
     - на главную
     - в начало
 
-- intent: btn_account_manage                                      # Управление счетом
+- intent: int_account_manage                                      # Управление счетом
   examples: |
     - управлять счетом
     - управление счетом
     - изменить счет
 
-- intent: btn_account_manage_payment_by_card                       # оплата банковской картой
+- intent: int_account_manage_payment_by_card                       # оплата банковской картой
   examples: |
     - пополнить картой
     - внести с карты
     - оплатить картой
     - перевести с карты на счет
 
-- intent: btn_account_manage_details                                      # детализация счета
+- intent: int_account_manage_details                                      # детализация счета
   examples: |
     - детализация счета
     - дайте распечатку
@@ -66,7 +66,7 @@ nlu:
     - расходы за период
     - показать расходы
 
-- intent: btn_fix_internet                                        # Починить интернет
+- intent: int_fix_internet                                        # Починить интернет
   examples: |
     - раздел чинить интернет
     - чинить интернет
@@ -74,7 +74,7 @@ nlu:
     - починить связь
     - нет связи
   
-- intent: btn_domofon                                             # Домофон
+- intent: int_domofon                                             # Домофон
   examples: |
     - домофон
     - домофоны
@@ -82,3 +82,71 @@ nlu:
     - раздел домофон
     - про домофоны
 
+- intent: int_account_manage_payment_methods  # методы оплаты
+  examples: |
+    - покажи методы оплаты
+    - методы оплаты
+    - выбрать метод оплаты
+    - выбор метода оплаты
+
+- intent: int_account_manage_promised_payment  # подключить отстрочку
+  examples: |
+    - подключить отсрочку
+    - отсрочка
+    - хочу отсрочку
+    - обещанный платеж
+
+- intent: int_account_manage_voluntary_blocking  # Добровольная блокировка
+  examples: |
+    - заблокировать договор
+    - блокировка
+    - добровольная блокировка
+
+- intent: int_account_manage_wrong_pay  # ошибочный платеж
+  examples: |
+    - ошибочный платеж
+    - ошибка при платеже
+
+- intent: int_domofon_add_intercom  # установить домофон
+  examples: |
+    - установить домофон
+    - хочу домофон
+    - установите домофон
+    - подключить домофон
+
+- intent: int_domofon_key_required  # нужен ключ от домофона
+  examples: |
+    - ключ от домофона
+    - ключ для домофона
+    - дайте ключ от домофона
+    - ключ от двери
+    - купить ключ от домофона
+
+- intent: int_domofon_not_work  # не работает домофон
+  examples: |
+    - не работает домофон
+    - сломался домофон
+    - ремонт домофона
+    - почините домофон
+    - не работает дверь
+    - не работает калитка
+
+- intent: int_fix_internet_didnt_help  # автолечение не помогло
+  examples: |
+    - лечение не помогло
+    - автолечение не работает
+    - починить не получилось
+
+- intent: int_fix_internet_low_speed  # починить медленный интернет
+  examples: |
+    - маленькая скорость
+    - не работает интернет
+    - нет инетрнета
+
+- intent: int_fix_internet_new_device  # новое устройство
+  examples: |
+    - перепривязка
+    - новый компьютер
+    - новый ПК
+    - новый маршрутизатор
+    - новый роутер
