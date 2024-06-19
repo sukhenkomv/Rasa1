@@ -115,17 +115,20 @@ responses:
 
   utter_account_manage_promised_payment: # Подключить отсрочку
   - custom:
-      type: "deeplink"
+      text: "Подключить отсрочку"
+      action: "deeplink"
       data: "mlk://promisedPayment"
 
-  utter_account_manage_voluntary_blocking: # Заблокировать договор
+  utter_account_manage_voluntary_blocking: # Добровольная блокировка
   - custom:
-      type: "deeplink"
+      text: "Добровольная блокировка"
+      action: "deeplink"
       data: "mlk://voluntaryBlocking"
 
   utter_account_manage_details: # Детализация счета
   - custom:
-      type: "deeplink"
+      text: "Детализация счета"
+      action: "deeplink"
       data: "mlk://details"
 
   utter_account_manage_payment_methods: # Способы оплаты
@@ -140,46 +143,47 @@ responses:
 
   utter_account_manage_payment_by_card: # Оплатить картой
   - custom:
-      type: "deeplink"
+      text: "Оплата картой банка"
+      action: "deeplink"
       data: "mlk://payment?type=card&amount=100"
 
   utter_account_manage_wrong_pay: # Ошибка при оплате
   - custom:
       text: "Пришлите скриншот или фотографию чека с указанием номера договора, на который необходимо перенести сумму платежа. В случае, если сумма переноса больше либо равна 1000 руб, прикрепите заявление по шаблону."
-      type: "file"
+      action: "file"
       data: "https://i.imgur.com/zajavlenie.jpg"
 
   utter_fix_internet_low_speed:
   - custom:
       text: "Убедитесь что ваш Wi-Fi роутер работает, а основной интернет-кабель включен в правильный разъем (internet или wan). Также проверьте, что на ваших устройствах есть подключение к роутеру по кабелю или по Wi-Fi. В приложении Электронный город перейдите в раздел 'Помощь', затем 'Починить интернет' и нажмите кнопку 'Запустить'."
-      type: "deeplink"
+      action: "deeplink"
       data: "mlk://autotherapy"
 
   utter_fix_internet_new_device:
   - custom:
       text: "Интернет-кабель подключите к вашему новому устройству. Сделайте это в правильный разъем: internet или wan. Включите устройство. Далее в приложении Электронный город перейдите в раздел 'Помощь', затем 'Починить интернет' и нажмите 'Запустить'."
-      type: "deeplink"
+      action: "deeplink"
       data: "mlk://autotherapy"
 
   utter_fix_internet_didnt_help:
   - custom:
       text: "Автолечение не помогло"
-      type: "handoff_to_human"
+      action: "handoff_to_human"
 
   utter_domofon_add_intercom:
   - custom:
       text: "Подключить домофон"
-      type: "handoff_to_human"
+      action: "handoff_to_human"
 
   utter_domofon_key_required:
   - custom:
       text: "Требуется ключ"
-      type: "handoff_to_human"
+      action: "handoff_to_human"
 
   utter_domofon_not_work:
   - custom:
       text: "Не работает домофон"
-      type: "handoff_to_human"
+      action: "handoff_to_human"
 
 actions:
   - action_show_time
