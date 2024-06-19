@@ -4,6 +4,8 @@ intents:
   - int_greet
   - int_goodbye
   - int_what_time_is_it
+  - int_chitchat
+  - int_out_of_scope
 
     # показать главное меню
   - int_show_main_menu
@@ -48,6 +50,14 @@ responses:
   - text: Покедова!
   - text: Не поминайте лихом!
   - text: Чао!
+
+  utter_chitchat:
+  - text: "Меня зовут Смарт-бот"
+  - text: "С утра меня звали Смарт-бот"
+  - text: "Мне без разницы какая погода"
+
+  utter_out_of_scope:
+  - text: Извините, но нам лучше не отвлекаться от нашей цели.
 
   utter_main_menu:                          # Показать главное меню
   - text: Какой у вас вопрос?

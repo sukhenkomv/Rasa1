@@ -7,6 +7,7 @@ rules:
   steps:
   - intent: int_greet
   - action: utter_greet
+  - action: utter_main_menu
 
 - rule: пока
   steps:
@@ -17,6 +18,17 @@ rules:
   steps:
   - intent: int_what_time_is_it
   - action: action_show_time
+
+- rule: отклики на болтовню
+  steps:
+  - intent: int_chitchat                      # 🙎 что-то из намерений chitchat
+  - action: utter_chitchat                # 💻 ответ на этот вопрос
+
+- rule: намерение находится вне рамок знаний бота 
+  steps:
+  - intent: int_out_of_scope                    # 🙎 несу какую-то пургу
+  - action: utter_out_of_scope              # 💻 Нам лучше не отвлекаться от нашей цели.
+  - action: utter_main_menu 
 
 - rule: Показать главное меню
   steps:
