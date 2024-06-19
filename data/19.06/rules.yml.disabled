@@ -1,0 +1,28 @@
+varsion: "3.1"
+
+rules:
+
+- rule: Старт
+  steps:
+  - action: utter_main_manu
+
+- rule: Показать главное меню
+  steps:
+  - intent: btn_show_main_menu
+  - action: utter_main_manu
+
+- rule: Показать вложенные кнопки для Управление счетом
+  steps:
+  - intent: btn_account_manage
+  - action: utter_account_manage
+
+- rule: Показать вложенные кнопки для Починить интернет
+  steps:
+  - intent: btn_fix_internet
+  - action: utter_fix_internet
+
+- rule: Показать вложенные кнопки для Домофон
+  steps:
+  - intent: btn_domofon
+  - action: utter_domofon
+

@@ -1,15 +1,27 @@
-varsion: "3.1"
+version: "3.1"
 
 rules:
 
-- rule: Старт
+- rule: привет
+  conversation_start: true
   steps:
-  - action: utter_main_manu
+  - intent: int_greet
+  - action: utter_greet
+
+- rule: пока
+  steps:
+  - intent: int_goodbye
+  - action: utter_goodbye
+
+- rule: Скажи мне сколько времени
+  steps:
+  - intent: int_what_time_is_it
+  - action: action_show_time
 
 - rule: Показать главное меню
   steps:
   - intent: btn_show_main_menu
-  - action: utter_main_manu
+  - action: utter_main_menu
 
 - rule: Показать вложенные кнопки для Управление счетом
   steps:
@@ -26,3 +38,73 @@ rules:
   - intent: btn_domofon
   - action: utter_domofon
 
+- rule: Подключить отсрочку
+  steps:
+  - intent: btn_account_manage_promised_payment
+  - action: utter_account_manage_promised_payment
+  - action: utter_account_manage
+
+- rule: Заблокировать договор
+  steps:
+  - intent: btn_account_manage_voluntary_blocking
+  - action: utter_account_manage_voluntary_blocking
+  - action: utter_account_manage
+
+- rule: Детализация счета
+  steps:
+  - intent: btn_account_manage_details
+  - action: utter_account_manage_details
+  - action: utter_account_manage
+
+- rule: Способы оплаты
+  steps:
+  - intent: btn_account_manage_payment_methods
+  - action: utter_account_manage_payment_methods
+
+- rule: Оплата картой
+  steps:
+  - intent: btn_account_manage_payment_by_card
+  - action: utter_account_manage_payment_by_card
+  - action: utter_account_manage_payment_methods
+
+- rule: Ошибка при оплате
+  steps:
+  - intent: btn_account_manage_wrong_pay
+  - action: utter_account_manage_wrong_pay
+  - action: utter_account_manage
+
+- rule: Пропал интернет / низкая скорость
+  steps:
+  - intent: btn_fix_internet_low_speed
+  - action: utter_fix_internet_low_speed
+  - action: utter_fix_internet
+
+- rule: У меня новый роутер/ ПК
+  steps:
+  - intent: btn_fix_internet_new_device
+  - action: utter_fix_internet_new_device
+  - action: utter_fix_internet
+
+- rule: Я всё сделал, не помогло =(
+  steps:
+  - intent: btn_fix_internet_didnt_help
+  - action: utter_fix_internet_didnt_help
+  - action: utter_fix_internet
+
+- rule: Подключить домофон
+  steps:
+  - intent: btn_domofon_add_intercom
+  - action: utter_domofon_add_intercom
+  - action: utter_domofon
+
+- rule: Требуется ключ
+  steps:
+  - intent: btn_domofon_key_required
+  - action: utter_domofon_key_required
+  - action: utter_domofon
+
+- rule: Домофон не работает
+  steps:
+  - intent: btn_domofon_not_work
+  - action: utter_domofon_not_work
+  - action: utter_domofon
