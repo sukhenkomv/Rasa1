@@ -24,53 +24,43 @@ class ActionShowTime(Action):
         return []
 
 
-# class ActionHelloWorld(Action):
-#
-#     def name(self) -> Text:
-#         return "action_hello_world"
-#
-#     def run(self, dispatcher: CollectingDispatcher,
-#             tracker: Tracker,
-#             domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
-#         dispatcher.utter_message(text="Hello World!")
-#
-#         return []
-
-
-class ActionRestart(Action):
+class ActionMyAction1(Action):
 
     def name(self) -> Text:
-        return "action_restart"
+        return "action_my_action1"
 
-    async def run(
-            self, dispatcher, tracker: Tracker, domain: Dict[Text, Any]
-    ) -> List[Dict[Text, Any]]:
-        # custom behavior
-        dispatcher.utter_message(response="utter_main_menu")
-        return [...]
+    def run(self, dispatcher: CollectingDispatcher,
+            tracker: Tracker,
+            domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
+        dispatcher.utter_message(text="My action 1")
+        print("My action 1:")
+        print(tracker.slots)
+        print("Slot ACCOUNT_ID: {}" . format(tracker.get_slot("ACCOUNT_ID")))
+        print("Slot ADDRESSES: {}" . format(tracker.get_slot("ADDRESSES")))
+        return []
 
 
-# class ActionListen(Action):
+# class ActionRestart(Action):
 #
 #     def name(self) -> Text:
-#         return "action_listen"
+#         return "action_restart"
 #
 #     async def run(
 #             self, dispatcher, tracker: Tracker, domain: Dict[Text, Any]
 #     ) -> List[Dict[Text, Any]]:
 #         # custom behavior
-#         dispatcher.utter_message(text="action_listen")
+#         dispatcher.utter_message(response="utter_main_menu")
 #         return [...]
-
-
-class ActionSessionStart(Action):
-
-    def name(self) -> Text:
-        return "action_session_start"
-
-    async def run(
-            self, dispatcher, tracker: Tracker, domain: Dict[Text, Any]
-    ) -> List[Dict[Text, Any]]:
-        # custom behavior
-        dispatcher.utter_message(response="utter_main_menu")
-        return [...]
+#
+#
+# class ActionSessionStart(Action):
+#
+#     def name(self) -> Text:
+#         return "action_session_start"
+#
+#     async def run(
+#             self, dispatcher, tracker: Tracker, domain: Dict[Text, Any]
+#     ) -> List[Dict[Text, Any]]:
+#         # custom behavior
+#         dispatcher.utter_message(response="utter_main_menu")
+#         return [...]

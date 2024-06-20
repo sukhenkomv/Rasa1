@@ -6,6 +6,7 @@ intents:
   - int_what_time_is_it
   - int_chitchat
   - int_out_of_scope
+  - int_my_action1
 
     # показать главное меню
   - int_show_main_menu
@@ -35,6 +36,24 @@ intents:
   - int_domofon_key_required
   - int_domofon_not_work
 
+entities:
+  - ACCOUNT_ID
+  - ADDRESSES
+
+slots:
+
+  ACCOUNT_ID:
+    type: text
+    mappings:
+    - type: from_entity
+      entity: ACCOUNT_ID
+
+  ADDRESSES:
+    type: list
+    mappings:
+    - type: from_entity
+      entity: ADDRESSES
+
 responses:
 
   utter_greet:
@@ -58,6 +77,8 @@ responses:
 
   utter_out_of_scope:
   - text: Извините, но нам лучше не отвлекаться от нашей цели.
+
+#-------------------- Кнопки ------------------------------------------
 
   utter_main_menu:                          # Показать главное меню
   - text: Какой у вас вопрос?
@@ -197,5 +218,4 @@ responses:
 
 actions:
   - action_show_time
-  - action_restart
-  - action_session_start
+  - action_my_action1

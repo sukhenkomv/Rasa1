@@ -30,6 +30,13 @@ rules:
   - action: utter_out_of_scope              # 💻 Нам лучше не отвлекаться от нашей цели.
   - action: utter_main_menu 
 
+- rule: для my_action1
+  steps:
+  - intent: int_my_action1
+  - action: action_my_action1
+
+#-----------------------  Кнопки ---------------------------
+
 - rule: Показать главное меню
   steps:
   - intent: int_show_main_menu
